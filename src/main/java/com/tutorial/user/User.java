@@ -20,7 +20,7 @@ public class User {
         return name;
     }
 
-    public String getDate_Of_Birth() {
+    public String getDateOfBirth() {
         return date_of_birth;
     }
 }
