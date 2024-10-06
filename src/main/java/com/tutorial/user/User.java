@@ -4,12 +4,12 @@ public class User {
 
     private int id;
     private String name;
-    private String date_of_birth;
+    private String dateOfBirth;
 
-    public User(int id, String name, String date_of_birth) {
+    public User(int id, String name, String dateOfBirth) {
         this.id = id;
         this.name = name;
-        this.date_of_birth = date_of_birth;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public int getId() {
@@ -20,7 +20,7 @@ public class User {
         return name;
     }
 
-    public String getDate_of_birth() {
-        return date_of_birth;
+    public String getDateOfBirth() {
+        return dateOfBirth;
     }
 }
