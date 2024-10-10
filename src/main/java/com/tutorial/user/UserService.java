@@ -19,4 +19,13 @@ public class UserService {
     public List<User> findById(int id) {
         return userMapper.getById(id);
     }
+
+    public User insert(String name, String dateOfBirth) {
+        User user = new User(name, dateOfBirth);
+        userMapper.insert(user);
+        return user;
+    }
 }
+
+
+
