@@ -4,11 +4,11 @@ package com.tutorial.user;
 public class UserRequest {
     private String name;
 
-    public String dateOfBirth;
+    public String date_of_birth;
 
-    public UserRequest(String name, String dateOfBirth) {
+    public UserRequest(String name, String date_of_birth) {
         this.name = name;
-        this.dateOfBirth = dateOfBirth;
+        this.date_of_birth = date_of_birth;
     }
 
     public String getName() {
@@ -16,10 +16,6 @@ public class UserRequest {
     }
 
     public String getDateOfBirth() {
-        return dateOfBirth;
+        return date_of_birth;
     }
 }
-
-
-
-

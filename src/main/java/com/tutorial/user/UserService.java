@@ -20,12 +20,9 @@ public class UserService {
         return userMapper.getById(id);
     }
 
-    public User insert(String name, String dateOfBirth) {
-        User user = new User(name, dateOfBirth);
+    public User insert(String name, String date_of_birth) {
+        User user = new User(name, date_of_birth);
         userMapper.insert(user);
         return user;
     }
 }
-
-
-
