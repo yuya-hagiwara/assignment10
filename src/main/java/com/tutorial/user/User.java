@@ -4,18 +4,18 @@ public class User {
 
     private Integer id;
     private String name;
-    private String date_of_birth;
+    private String dateOfBirth;
 
-    public User( Integer id, String name, String date_of_birth) {
+    public User( Integer id, String name, String dateOfBirth) {
         this.id = id;
         this.name = name;
-        this.date_of_birth = date_of_birth;
+        this.dateOfBirth = dateOfBirth;
     }
 
-    public User(String name, String date_of_birth){
+    public User(String name, String dateOfBirth){
         this.id = null;
         this.name = name;
-        this.date_of_birth = date_of_birth;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public int getId() {
@@ -27,6 +27,6 @@ public class User {
     }
 
     public String getDateOfBirth() {
-        return date_of_birth;
+        return dateOfBirth;
     }
 }

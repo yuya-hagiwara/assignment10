@@ -15,7 +15,7 @@ public interface UserMapper {
     @Select("SELECT * FROM users WHERE id = #{id}")
     List<User> getById(int id);
 
-    @Insert("INSERT INTO users (name, date_of_birth) VALUES(#{name}, #{date_of_birth})")
+    @Insert("INSERT INTO users (name, date_of_birth) VALUES(#{name}, #{dateOfBirth})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
     void insert(User user);
 }
