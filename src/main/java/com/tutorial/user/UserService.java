@@ -32,7 +32,7 @@ public class UserService {
         User user = null;
         try {
             user = this.userMapper.findById(id)
-                    .orElseThrow(() -> new UserNotFoundException("user not found with id: " +id));
+                    .orElseThrow(() -> new UserNotFoundException("user not found with id: " + id));
         } catch (UserNotFoundException e) {
             throw new RuntimeException(e);
         }

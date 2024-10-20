@@ -29,10 +29,6 @@ public class User {
         return dateOfBirth;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
