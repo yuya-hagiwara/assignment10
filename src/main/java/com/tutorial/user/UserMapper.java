@@ -1,5 +1,6 @@
 package com.tutorial.user;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
@@ -26,4 +27,7 @@ public interface UserMapper {
 
     @Update("UPDATE users SET name = #{name}, date_of_birth = #{dateOfBirth} WHERE id = #{id}")
     void update(User user);
+
+    @Delete("DELETE FROM users WHERE id = #{id}")
+    void delete(int id);
 }

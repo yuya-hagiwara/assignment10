@@ -43,4 +43,17 @@ public class UserService {
         userMapper.update(user);
         return user;
     }
+
+
+    public User delete(int id) {
+        User user = null;
+        try {
+            user = this.userMapper.findById(id)
+                    .orElseThrow(() -> new UserNotFoundException("user not found with id: " + id));
+        } catch (UserNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        userMapper.delete(id);
+        return user;
+    }
 }
