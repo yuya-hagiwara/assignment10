@@ -18,6 +18,9 @@ public interface UserMapper {
     @Select("SELECT * FROM users WHERE id = #{id}")
     List<User> getById(int id);
 
+    @Select("SELECT * FROM users")
+    List<User> findAll();
+
     @Select("SELECT * FROM users WHERE id = #{id}")
     Optional<User> findById(int id);
 
