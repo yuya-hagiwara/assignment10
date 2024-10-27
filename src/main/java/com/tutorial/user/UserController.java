@@ -2,6 +2,7 @@ package com.tutorial.user;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -44,6 +45,14 @@ public class UserController {
     public ResponseEntity<UserResponse> update(@PathVariable("id") int id, @RequestBody @Validated UserUpdateRequest userUpdateRequest) {
         User user = userService.update(id, userUpdateRequest.getName(), userUpdateRequest.getDateOfBirth());
         UserResponse body = new UserResponse("user updated!");
+        return ResponseEntity.ok(body);
+    }
+
+
+    @DeleteMapping("/users/{id}")
+    public ResponseEntity<UserResponse> delete(@PathVariable("id") int id) {
+        User user = userService.delete(id);
+        UserResponse body = new UserResponse("user deleted!");
         return ResponseEntity.ok(body);
     }
 }
