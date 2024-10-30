@@ -1,0 +1,10 @@
+users:
+  - id: 1
+    name: "yuya"
+    date_of_birth: "1990/03/25"
+  - id: 2
+    name: "taka"
+    date_of_birth: "1992/05/10"
+  - id: 3
+    name: "hiro"
+    date_of_birth: "1995/12/23"
